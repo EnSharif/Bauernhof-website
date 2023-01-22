@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="de">
+<head>
+<title>Hofprogram</title>
+<meta charset="utf-8">
+<meta name="robots" content="noindex"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Unser Ferienhof liegt im Hunsrück, nicht weit von Rhein und Mosel, umgeben von Wiesen und Wäldern. Genießt einen erholsamen Urlaub mit der ganzen Familie!">  
+<meta name="Keywords" content="Bauernhof bio ">
+<link href="css/lightbox.css" rel="stylesheet">	
+<link href="css/slippry.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="fontawesome-free-6/css/all.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/slippry.min.js"></script>
+
+</head>   
+
+
+
+<body>   
+   <div id="all">
+   <header>
+     <div id="head">
+        <img src="img/home-willkommen-logo6.svg" alt="Logo">
+        <input type="checkbox" id="navchecker">
+        <nav id="topnav">
+         <label for="navchecker"> 
+            <span class="line"></span> 
+            <span class="line"></span>
+            <span class="line"></span> 
+          </label>
+      <ul>
+        <li><a href="index.html"> Unser Hof</a></li>
+        <li><a href="Unterkünfte.html">Unterkünfte</a></li>
+        <li><a href="Hofprogramm.html">HofProgramm</a></li>
+        <li><a href="Bioprodukte.html">bio_Produkte</a></li>  
+        <li><a href="Kontakt.html">Kontakt</a> </li>
+      </ul>
+    </nav>
+        </div>
+        
+   </header>
+        <article id="art5">
+             <h1>Hofprogram</h1> 
+    </article> 
+    <main id="cont03">
+          <article class="reg_zweispalten wrapper1000 ">
+               <figure class="reg_bg1">
+                      <img src="img/121.jpg" alt="Pfeil" >
+                     <figcaption>
+                      <h2>Tierfütterung</h2><br><p>Bei unserer Tierfütterung (von Montag bis Freitag) freut sich Bauer Christoph über viele helfende Hände. Unsere Ziegen, Schafe, Schweine, Hasen, Hühner und das Damwild freuen sich über Streicheleinheiten und Leckereien.</p></figcaption></figure>  
+              <figure class="reg_bg1">
+                           <figcaption><h2>Spielplatz</h2><br><p>Auf dem großen Spielplatz mit Baumhaus, Schaukeln, Indianertipi, Holzpferd, Rutsche und Sandkasten oder auf dem Bolzplatz mit Torwand, Basketballkorb, Hockey-, Fußball- und Beachvolleyballfeld, Bouleplatz oder Riesentrampolin.</p></figcaption>
+                 <img src="img/128.jpg" alt="Pfeil" >
+                </figure>
+                
+                  <figure class="reg_bg1">
+                      <img src="img/115.jpg" alt="Pfeil" >
+                         <figcaption class="reg_cap"><h2>Ponyreiten</h2><br><p>Immer montags, mittwochs und freitags findet unsere Ponywanderung durch den angrenzenden Wald und die Felder statt. Beim Striegeln und Putzen können die Kinder sich mit den Ponys vertraut machen, bevor es losgeht.</p></figcaption>
+                  </figure>
+                
+                <figure class="reg_bg1">
+                          <figcaption><h2>Bogenschießen</h2><br><p>Jeden Dienstag kommt unser mobiler Bogenschütze Günther. Günther ist seit 15 Jahren Übungsleiter im Verein und zeigt uns wie man richtig mit Pfeil und Bogen umgeht. Die Aktion dauert ca. eineinhalb Stunden und ist für Kinder ab 8 Jahren möglich. Der Preis pro Person beträgt 12 Euro.
+                          </p></figcaption>
+                 <img src="img/112.jpg" alt="Pfeil" >
+               </figure>
+          </article>
+         </main>     
+   <!------Footer container------>
+<article>
+  <div class="foo_con01">
+    <div id="foo_logo" > <img src="img/home-willkommen-logo4.svg" alt="logo"></div>
+    <div>
+      <div id="foo_con02">
+        <div>
+          <h3>Besuchen sie uns</h3>
+          <p>Musterstraße 1<br>
+            12345 Musterstadt</p>
+        </div>
+        <div>
+          <h3>Unser Bauernhof</h3>
+          <p>info@example.de<br>
+            +44(0)555 555 5555</p>
+        </div>
+        <div>
+          <h3>Informationen</h3>
+          <a href="Impressum.html"><p>Impressum</p></a>
+          <a href="Datenschutz.html"><p>Datenschutzerklärung</p></a>
+        </div>
+      </div>
+    </div>
+        
+  </div>
+</article>
+ <!----Footer----------------->
+<footer id="foot">
+  <p>Copyright &copy; 2022 All Rights Reserved by...</p>
+</footer>
+  <div id="back-top">
+     <a href="#"><i class="fa-solid fa-arrow-up-long"></i></a>
+ </div>        
+ </div>
+      <script src="js/lightbox.min.js"></script>
+<script>
+//button ein-/ausblenden
+	$(window).scroll(function(){
+		if($(window).scrollTop() > 200){
+			$('#back-top').fadeIn(1000);
+		}
+		else {
+			$('#back-top').fadeOut(1000);
+		}
+	});
+
+    //langsam nach oben scrollen
+	$('#back-top a').click(function(){
+		$('html,body').animate({scrollTop:0},1000);
+		return false;
+	});
+      
+      // navi slidet zum Ziel
+	$('#topnav a').click(function(){
+		var link = $(this).attr('href');
+		var linkzielpos = $(link).offset().top;
+					
+		if(linkzielpos < 200){
+			$('html,body').animate({scrollTop:$(link).offset().top - 150},1000);
+		}
+		else {
+			$('html,body').animate({scrollTop:$(link).offset().top - 60},1000);
+		}
+	});
+
+
+	
+	
+	
+	//sticky-menu ----------------------------
+	$(window).scroll(function(){
+		
+		if($(window).scrollTop() > 200){
+		   $('header').addClass('sticky');
+		}
+		else {
+		   $('header').removeClass('sticky');
+		}
+	});
+      
+   </script>
+</body>
+</html>

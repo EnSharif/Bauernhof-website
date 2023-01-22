@@ -1,0 +1,1000 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: Merienda-Bold;
+  src: url(../fonts/Merienda-Bold.ttf) format('ttf'), 
+	   url(../fonts/Merienda-Bold.ttf) format('ttf'); 
+}
+
+@font-face {
+  font-family: Merienda-Regular;
+  src: url(../fonts/Merienda-Regular.ttf) format('ttf'), 
+	   url(../fonts/Merienda-Regular.ttf) format('ttf'); 
+}
+
+
+* {   margin: 0;
+	padding: 0;
+	box-sizing: border-box;}
+
+input[id*="checker"]{
+        display: none;}
+/* typselektoren --------------------------*/
+img {max-width: 100%;
+	height: auto;
+	display: block;}
+
+html {font:  1rem 'Merienda-Bold' , cursive;}
+h1, h2, h3 { font-family: 'Merienda-Bold' , cursive;}
+
+
+p    {font-family: 'Merienda-Regular', cursive; font-size: 1rem;}
+a    {text-decoration: none; cursor: pointer;}
+#all {background: #FFFBE9;margin: 0 ;}
+
+
+/* --------------Mobile --------------------------*/
+@media screen and (max-width:680px){
+      
+	html {font:  1rem 'Merienda-Bold' , cursive;}
+h1, h2, h3 { font-family: 'Merienda-Bold' , cursive;}
+
+a  {text-decoration: none;}
+h2 {padding:1rem 0 0.5rem;color: #63402B;}
+p { line-height: 1.5rem;color: #452D1E;}
+      
+      
+      
+	/* Inhalt von oben ------------------------*/
+    
+
+ header {   
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 100;
+		height:80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2%;
+		background:rgba(92,60,40,1.00) ;
+		transition: 0.5s;margin: auto;}
+	
+	  
+header.sticky { height: 65px;
+		    align-items: flex-start;}
+
+header img { /*--logo---*/
+		position:absolute;
+            top: 5px;
+            left:50px;
+            width:75px;
+		transition: 0.7s;
+            flex-basis: 25%;}
+      
+.sticky img {
+		width: 55px;
+		background: radial-gradient(rgba(132,102,36,0.66), 
+             transparent 80%);
+		 transform:translateY(4px);
+             padding:3px ;
+	}
+#art1   {    background: url("../img/bauernhof-alpen.jpg") center top fixed;
+		 background-size: cover;
+             display:flex;
+             height:600px;
+             justify-content: center;
+             text-transform: uppercase;
+             margin-top: -40px ;
+             color: #fff;
+             font-size: 1.5rem;
+             text-align: center;
+             margin: auto;
+             padding-top: 400px;
+             text-shadow: 3px 4px 7px rgba(81,67,21,0.8); }
+            
+           
+      
+
+	
+	/* burger-menu --------------------*/
+#topnav {
+	    position: fixed;
+	    top: 0;
+	    bottom: 0;
+	    right: -200px;
+	    z-index: 100;
+	    background:rgba(90,39,4,0.5);
+	    width: 200px;
+	    transition: 0.4s;
+          margin: auto;}
+      
+#navchecker:checked + #topnav {right: 0px;}
+      
+		/* ani-burger --*/
+#topnav label {
+			background:rgba(144,107,83,0.7);
+			height: 50px;
+			width: 50px;
+			display: block;
+			position: fixed;
+			top:0.4rem;
+			right:0;
+			cursor: pointer;
+			border-radius: 10px 0 10px 10px;
+                  margin: auto;}
+.line {
+			height: 2px;
+			width: 60%;
+			background:rgba(255,251,233,1.00);
+			display: block;
+			position: absolute;
+			left: 20%;
+			transition: 0.4s 0.4s;
+		}
+.line:nth-of-type(1) { top: calc(35% - 1px); }
+.line:nth-of-type(2) { top: calc(50% - 1px); }
+.line:nth-of-type(3) { top: calc(65% - 1px); }
+		
+#navchecker:checked + #topnav .line:nth-of-type(1) {
+           transform: rotate(45deg);
+           top: calc(50% - 1px);
+		}
+#navchecker:checked + #topnav .line:nth-of-type(2) {
+           transform: scale(0);
+           opacity: 0;
+		}
+#navchecker:checked + #topnav .line:nth-of-type(3) {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+      }
+/* ani-burger, fertig --*/
+#topnav ul  { list-style: none;
+		  padding-top: 4rem}
+#topnav a  {
+		  text-decoration: none;
+		  color: #fff;
+		  text-transform: uppercase;
+		  line-height: 50px;
+		  display: block;
+		  padding-left: 1rem;
+		  transition: 0.5s;
+              border-bottom: 1px solid;}
+      
+#topnav:hover a,
+#topnav:active a { /* für Apfel und klick */
+			border-bottom: 1px solid #fff;
+			line-height: 40px;
+			opacity: 1;}
+#topnav a:hover,
+#topnav a:active {color: #DB7A0E;
+			background: #ccc;}
+       
+      
+
+
+#cont1   { background:url("../img/home-willkommen-logo2.svg")  no-repeat;
+           background-position: 100% 2%;
+           margin: auto;padding: 2%;}  
+      
+ #cont1 h2 > strong { font-weight: bold;
+                       font-size: 30px;
+                       text-transform: uppercase;
+                       color: #6d4919; 
+                       text-shadow: 3px 4px 7px rgba(81,67,21,0.60);
+                      
+                       }   
+      
+#art2   {  background: url("../img/bauernhofhaus.jpg") center top fixed;
+           background-size: cover;
+           height:800px; 
+           display: flex;
+           align-items: center;} 
+      
+.cont2  { background: rgba(255,251,233,1.00); margin: 2% auto;padding: 5%;}
+      
+#cont03{text-align: center;padding: 2%;margin: auto 2rem;}
+/* ------Foto spalter--------- */   
+      
+#home{margin: 80px;}
+.overlay  { 
+             text-align: center;}  
+
+.bg h5  {    color:#5C3C28;
+            opacity:1 ;
+            font-size:1.5rem;}	  
+      
+.bg img  { border-radius: 10px;
+           width:250px;
+           height:190px; 
+           transition:0.6s;
+           box-shadow: 0 0 5px} 
+
+
+.bg:hover  h5{ opacity: 1;transform:translateY(-120px);}
+.bg:hover img{opacity: 0.6;cursor: pointer;}    
+       
+ /*---------Column Spalter3-----------*/
+ #spal3  { margin: auto;
+           background: #FFFBE9;
+           max-width: 1400px; 
+           padding: 2%;
+           transition: 0.5s;}
+      
+ #spal3 img { width: 400px;
+              padding: 1%;
+              overflow: hidden;
+              box-shadow:0 0 10px;
+              margin: 0.5rem auto;} 
+      
+ .spalten03 { column-count: 3;
+              column-width: 300px;
+              column-gap: 3rem;}
+       
+      
+#spal_fam   { color: #fff;
+              background: #A27252;
+              width: 320px;
+              margin: 3% auto;
+              line-height: 40px;
+              border-radius: 5px;
+              text-align: center;}
+      
+#spal_fam  h1,h3 { color: #fff;}
+           
+
+
+
+
+
+/* back-to-top --------*/
+	
+#back-top {
+		position: fixed;
+		right: 1rem;
+		bottom: 1rem;
+		display: none;
+		z-index: 100;
+	}
+#back-top a {
+		background: rgba(225,112,42,0.50);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 50%;
+		padding: 0.9rem 1.1rem;
+		display: block;
+	}
+.fa-arrow-up-long{ font-size: 1.2rem ;}
+	/* slider-Anpassung -----*/
+	.sy-box {
+		padding: 5% 0;
+	}
+
+
+	/* freie Klassen --------------------------*/
+	.cont {
+		background: #fff;
+	}
+	/* spalterei -----------*/
+	
+
+	/* abstand -----------*/
+	
+	.pad20{ padding: 2% 0; }
+	
+
+/*--------Unterkünfte-------------*/
+      #art3 {
+		background: url("../img/unterkünfte22.jpg") center top fixed;
+		background-size: cover;
+            display:flex;
+            justify-content: center;
+             height: 700px;
+             color:#FFFBE9;
+             font-size: 2rem;
+             padding-top: 400px; 
+             padding-bottom: 50px;
+             margin-top: -100px;
+             text-shadow: 3px 4px 7px rgba(54,30,3,0.84);
+      
+	}
+/* ---------lightBox -----------*/
+      
+	.spalten {display:flex; padding: 2% 0;justify-content: center;}
+	.spalten > * { flex-basis:0; flex-grow:1; }
+	
+      .pad2{background: rgba(255,251,233,1.00);
+            text-align: center;
+            line-height: 30px;}
+
+/*----slippry--------------------------------------*/
+      
+.slider_show{background: rgba(255,251,233,1.00);
+             display: flex;
+             justify-content:center;
+             flex-direction: row; 
+             flex-wrap: wrap;
+             gap:1rem;
+             padding-top: 3%}
+      
+      .unt_show01     {background:  rgba(255,251,233,1.00); width: 400px; margin:1rem}
+      .unt_show02     {padding: 1% 2%;line-height: 50px; width: 300px; margin:1rem}
+      .unt_show02 ul  {list-style: none;}
+      .unt_show02 li  { color: rgba(112,73,48,1.00); border-bottom: 1px solid rgba(92,60,40,0.5);}
+      .unt_show02 h2  {color: #4E2811; text-align: center;text-decoration: underline;}
+     
+      /*--Favicon-------*/
+      .fa-bath      {font-size: 1.3rem; padding-right: 12px;}
+      .fa-bed       {font-size: 1.3rem; padding-right: 10px;} 
+      .fa-regular   {font-size: 1.3rem; padding-right: 14px;}
+      .fa-wifi      {font-size: 1.3rem; padding-right: 12px;}
+      .fa-tv        {font-size: 1.3rem; padding-right: 12px;}
+      .fa-utensils  {font-size: 1.3rem; padding-right: 14px;}
+      
+ #unt_target  a   { color: rgba(211,128,24,1.00);
+                   padding: 2%;
+                   text-decoration: underline;}
+#unt_target   { color: rgba(92,60,40,1.00);padding: 2%;line-height: 1.5rem;margin: 2%;}
+#inh1         { display: none; }
+#inh1:target  { display: block;}
+ /*----Kontakt-------------------------------------*/     
+ #art4  {
+		background: url("../img/kontakt-(2).jpg") center fixed no-repeat;
+            background-size: cover;
+             display:flex; 
+             justify-content:center;
+             height: 200vw;
+             color:#fff;
+             padding-top: 400px;
+             padding-bottom: 50px;
+             text-transform: uppercase;
+             margin-top: -100px;
+             font-size: 10vw;
+            text-shadow: 3px 4px 10px rgba(8,72,117,0.60);}
+      
+#map { width:300vw;
+       overflow: hidden}    
+.pad52{ padding: 5% 2%;}   
+  
+.kon_form {margin: auto;
+           padding: 5%;
+           display: flex;
+           justify-content:center;
+           flex-wrap: wrap;
+           gap:8rem;}
+      
+ #download {       width: 350px;
+                    background: #D1ECD8;
+                    padding: 5%;
+                    margin: auto;}
+      
+ #download img { border-radius: 7px; width:120px ;
+                      height:50px;margin: auto;}
+      
+      
+/*------------Hofprogram--------------*/
+   #art5{background: url("../img/erleben-entspannen.jpg")center fixed no-repeat;
+          background-size: cover;
+             display:flex; 
+             justify-content:center;
+             height: 200vw;
+             color:#fff;
+             padding-top: 400px;
+             padding-bottom: 50px;
+             text-transform: uppercase;
+             margin-top: -100px;
+             font-size: 8vw;
+            text-shadow: 3px 4px 10px rgba(108,56,5,0.60);}  
+
+    
+     .reg_bg1 { text-align: center;
+                 margin:2rem auto;
+              }
+      .reg_bg1 > *{ 
+                    text-align: center;
+                    margin: auto;} 
+     
+      .reg_bg1 img{margin: auto;
+                    width: 500px;
+                   height: 350px;}
+      .reg_bg1 >figcaption { background:#F78726; padding: 2%; margin: auto;}
+       
+      .reg_bg1 img:hover{-webkit-transform: scale(1.1);
+                          -ms-transform: scale(1.1);
+                            transform: scale(1.1);}
+      
+      
+   /* ------Bio-Produkte-----------------*/
+      
+#art6{ background: url("../img/15852.jpg") center top fixed;
+		 background-size: cover;
+             display:flex;
+             justify-content: center;
+             height: 600px;
+             align-items: center;
+             text-transform: uppercase;
+             margin-top: -40px;
+             color:#fff;
+             text-align: center;
+             font-size: 2rem;
+              text-shadow: 3px 4px 7px rgba(81,67,21,0.9);
+      } 
+      .bio-container{
+            gap:1rem;
+            margin: auto;
+            }
+      
+      #cont04{text-align: center;margin: auto;padding: 2%;}
+      #cont04 p{font-size: 1.2rem;}
+      #cont04 h2{font-size: 2.2rem}
+      
+      
+      .bio figcaption{padding:0 4% ;}
+      .bio figure {border: 2px solid #5C3C28 ;text-align: center; margin:1rem auto;width: 320px; padding: 2%;}
+      .bio img{ width: 300px;height: 270px;padding: 0.5rem;}   
+ /* -----Formular ----------*/
+.kon_form{padding:2% }	
+form  p{color: rgba(34,34,34,1.00); }
+      
+form input[type="submit"]{ padding: 0.6rem 0; }
+form input[type="submit"]:hover{background:rgba(118,144,160,0.2)}
+form       {width: 400px;}
+
+form  p     {color: rgba(34,34,34,1.00); }
+
+form input, form textarea {
+		width:100%;
+		padding:0.5rem;
+		margin: 2% 0;
+            font-size:  0.9rem ;}
+      
+/* ----- Foot---------------___________--*/
+.foo_con01 { position: relative;
+             right: 0;
+             left: 0;
+             color: #fff;
+             background: rgba(92,60,40,1.00);
+             padding: 2%;
+             margin: auto;}
+      
+#foo_logo   {  position: relative;
+               width:120px;
+               margin: auto;
+               padding-bottom: 2%}
+      
+#foo_con02 > div  {  margin: auto;
+                     padding: 3%;
+                     color: #fff; 
+                      text-align: center; } 
+      
+#foo_con02 p {color: #fff;line-height: 2rem;}
+#foo_con02 a{ color: #fff;line-height: 1rem; text-decoration: underline;}     
+#foot       { border-top: 1px solid rgba(255,251,233,0.2);
+              line-height: 3px;
+              text-align: center;
+              background: rgba(92,60,40,1.00);}
+      
+#foot p {color: #fff; }
+      
+      
+/*-------Impressum---&---Datenschutz----------------*/
+.imp_con01{
+           padding:40% 5%;
+           margin: auto;}
+    
+.imp_con01 a {color: #CF5808;} 
+      
+/*-------Datenschutz----------------*/
+      
+ .data{ padding: 40% 10px;
+           margin: auto;}     
+ .data  h3,h4{color: #452D1E;}      
+ .data a {color: #CF5808;}   
+      
+      
+}
+
+
+/*------Disktop----------------------------------*/
+
+@media screen and (min-width:681px){
+	html {font:  1rem 'Merienda-Bold' , cursive;}
+h1, h2, h3 { font-family: 'Merienda-Bold' , cursive;}
+      
+	h2    {padding:1rem 0 0.5rem;
+             color: #63402B;}
+
+	p    {font-size: 1rem; padding: 2%; color: #452D1E;}
+      
+      main { background:#FFFBE9;
+             display:block;
+             margin-top: 80px;}
+      
+      
+/* Inhalt von oben ------------------------*/
+header {    position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 100;
+		height: 100px;
+		display: flex;
+            align-items: center;
+		padding: 0 2%;
+		background:#5C3C28;
+		transition: 0.5s;}
+        
+ #head   {   max-width: 1000px;
+             margin-left: auto;
+             flex-basis:100%;
+             display:flex;
+             justify-content: space-between;
+             align-items:flex-end;}
+             
+header.sticky { height: 60px;
+		    align-items: center;
+                padding-bottom:  2%;}
+      
+      /*--logo---*/
+header img { position:absolute;
+             top: 4px;
+             left:50px;
+             width:100px;
+		 transition: 0.7s;
+             flex-basis: 25%;}
+      
+header.sticky img {  width: 150px;
+		         background: radial-gradient(rgba(255,251,234,0.5),transparent 80%);
+		         transform:translateY(4px);
+                     margin: 2%;}
+      
+#topnav {transition: 0.5s}
+header.sticky #topnav {padding-top: 20px}
+      
+#topnav ul {  display: flex;
+		  list-style: none;
+             }
+      
+#topnav a  {  position:relative;
+              right: 0;
+		  margin-left: 1rem;
+		  text-decoration: none;
+		  color:#FFFFFF;
+		  text-transform: uppercase;
+              margin-right: 2px;}
+      
+      
+#art1    {   background: url("../img/bauernhof-alpen.jpg") center top fixed;
+		 background-size: cover;
+             display:flex;
+             justify-content: center;
+             height: 600px;
+             align-items: center;
+             text-transform: uppercase;
+             margin-top: -40px;}
+       
+#art1 > div{
+           color: #fff;
+           text-align: center;
+           font-size: 2rem;
+           padding: 2%;
+           text-shadow: 3px 4px 7px rgba(81,67,21,0.8);}    
+           
+       
+       
+#art2 {
+		 background: url("../img/bauernhofhaus.jpg") center top fixed;
+		 background-size: cover;
+             height:800px; 
+             display: flex;
+             align-items: center;}  
+      
+.cont2 {  text-align: center;
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 220px; 
+           padding: 2%;
+          background: rgba(255,251,233,1.00);
+          line-height: 1.5rem;
+      margin: auto 0;  
+      }
+      
+
+      
+	 
+#topnav a:hover { color:#FCDCA6;}
+
+
+#cont1  {    background:url("../img/home-willkommen-logo2.svg")  no-repeat;
+             background-position: 100% 25%;
+             background-size: 350px;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             text-align: center;
+             height: 400px;
+             padding: 140px 20px;
+             line-height: 2rem;
+             font-weight: 400;
+             gap:30px;
+            margin-top: 20px ;}
+
+ #cont1 h2 > strong {    font-weight: bold;
+                       font-size: 40px;
+                       text-transform: uppercase;
+                       letter-spacing:2px;
+                       color: #6d4919; 
+                       text-shadow: 3px 4px 7px rgba(81,67,21,0.60);
+                      
+                       }
+      
+#cont03{text-align: center; padding: 2% ;margin: auto}
+      
+ /* ------Foto spalter--------- */   
+      
+#home{margin: 100px auto;}
+.overlay  { display: flex;
+            justify-content:center;
+            gap:1.5rem;
+            transition: 0.5s;
+           
+            text-align: center;}  
+
+img,
+.overlay { transition: .3s all;
+           border-radius: 3px;}
+
+
+.overlay h5 { color: #fff;
+              font-size: 1.5rem;
+              opacity: 0;}
+
+.bg:hover h5{transform:translateY(-155px); opacity: 1;}
+.bg:hover img{opacity: 0.6;cursor: pointer;}      
+      
+.bg img  { border-radius: 10px;
+           width: 350px;
+           height: 300px; 
+           transition:0.6s;
+           box-shadow: 0 0 5px} 
+
+/*---Column Spalter3-----------*/
+ #spal3  { margin: auto;
+           background: #FFFBE9;
+           max-width: 1400px; 
+           padding: 2%;}
+      
+ #spal3 img { width: 400px;
+              padding: 1%;
+              overflow: hidden;
+              box-shadow:0 0 10px;
+              margin: 0.5rem auto;} 
+      
+ .spalten03 { column-count: 3;
+              column-width: 300px;
+              column-gap: 3rem;}
+       
+      
+#spal_fam   { color: #fff;
+              background: #A27252;
+              width: 320px;
+              margin:2% auto;
+              line-height: 40px;
+              border-radius: 5px;
+              text-align: center;}
+      
+#spal_fam > h1,h3 { color: #fff; }
+           
+
+
+
+
+
+/* wrapper ---------*/
+.wrapper700, .wrapper1000, .wrapper1200, .wrapper1400 {
+               margin-left:auto;
+		   margin-right:auto;}
+.wrapper700  { max-width:700px; }
+.wrapper1000 { max-width:1000px; }
+.wrapper1200 { max-width:1200px; }
+.wrapper1400 { max-width:1400px; }
+
+	/* abstand -----------*/
+.pad20{ padding: 0 0; }
+.pad52{ padding: 5% 2%;}
+.pad2 { padding: 2%;   }
+
+
+
+ /*--Unterkünfte--------*/
+/* Inhalt von oben ------------------------*/   
+#art3 {
+		background: url("../img/unterkünfte22.jpg") center top fixed;
+		background-size: cover;
+            display:flex;
+            justify-content: center;
+             height: 800px;
+             color:#FFFBE9;
+             font-size: 3rem;
+             padding-top: 400px; 
+            padding-bottom: 50px;
+           margin-top: -100px;
+           text-shadow: 3px 4px 7px rgba(54,30,3,0.84);
+      
+	}
+/* ---------lightBox -----------*/
+      
+	.spalten {display:flex; padding: 2% 0;}
+	.spalten > * { flex-basis:0; flex-grow:1; }
+	.gap {gap: 1rem;}
+      .pad2{background: rgba(255,251,233,1.00);
+            text-align: center;
+            line-height: 30px;}
+
+/*----slippry--------------------------------------*/
+      
+.slider_show{background: rgba(255,251,233,1.00);
+             display: flex;
+             justify-content:center;
+             flex-direction: row; 
+             gap:1rem;
+             padding-top: 3%}
+      
+      .unt_show01     {background:  rgba(255,251,233,1.00); width: 700px;}
+      .unt_show02     {padding: 1% 2%;line-height: 60px;}
+      .unt_show02 ul  {list-style: none;}
+      .unt_show02 li  { color: rgba(112,73,48,1.00); border-bottom: 1px solid rgba(92,60,40,0.5);}
+      .unt_show02 h2  {text-align: center;text-decoration: underline;}
+     
+      /*--Favicon-------*/
+      .fa-bath      {font-size: 1.3rem; padding-right: 12px;}
+      .fa-bed       {font-size: 1.3rem; padding-right: 10px;} 
+      .fa-regular   {font-size: 1.3rem; padding-right: 14px;}
+      .fa-wifi      {font-size: 1.3rem; padding-right: 12px;}
+      .fa-tv        {font-size: 1.3rem; padding-right: 12px;}
+      .fa-utensils  {font-size: 1.3rem; padding-right: 14px;}
+      
+ #unt_target  a   { color: rgba(211,128,24,1.00);
+                   padding: 2%;
+                   text-decoration: underline;}
+#unt_target   { color: rgba(92,60,40,1.00);padding: 2%;line-height: 1.5rem;}
+#inh1         { display: none; }
+#inh1:target  { display: block;}
+      
+      
+/*--------kontakt-------------------*/
+
+#art4{    background: url("../img/kontakt-(2).jpg")center fixed no-repeat;
+          background-size: cover; 
+          display:flex;
+          justify-content: center;
+          height: 600px; 
+          color: #fff;
+          text-transform: uppercase;
+         
+          font-size: 3rem;
+          text-shadow: 3px 4px 10px rgba(8,72,117,0.60);
+      }
+#art4 h1  {margin: auto;}
+.kon_form {margin: auto;
+           padding: 5% 0;
+           display: flex;
+           justify-content:center;
+           flex-wrap: nowrap; 
+           gap:8rem;}
+      
+#download {   width: 400px;
+                    background: #D1ECD8;
+                    padding: 6%;
+                    margin:1rem auto;}
+      
+#download img { border-radius: 7px; width:120px ;
+                      height:50px;margin: auto;}
+      
+      
+form  p{color: rgba(34,34,34,1.00); }
+form input, form textarea {
+		width: 100%;
+		padding:0.5rem;
+		margin: auto;
+		font: 0.9rem Roboto400, sans-serif;
+	}
+form input[type="submit"]{ padding: 0.6rem 0; }
+form input[type="submit"]:hover{background:rgba(118,144,160,0.2)}
+form       {width: 400px;}
+.kont_con p{text-align: left;}
+
+form  p     {color: rgba(34,34,34,1.00); }
+form input, form textarea {
+		                width: 100%;
+		                padding:0.5rem;
+		                margin: auto;
+		                font: 0.9rem Roboto400, sans-serif;}
+/*------Hofprogram-------------------------*/
+      
+#art5{background: url("../img/erleben-entspannen.jpg")center fixed no-repeat;
+          background-size: cover; 
+          display:flex;
+          justify-content: center;
+          height: 600px; 
+          color: #fff;
+          padding-top: 300px;
+          text-transform: uppercase;
+          font-size: 3rem;
+          text-shadow: 3px 4px 10px rgba(108,56,5,0.60);
+      }
+      
+      .reg_zweispalten{width: 1000px; margin-bottom: 5rem;}
+      .reg_bg1 { 
+                  display: flex;
+                  background: #F78726;
+                  justify-content: center;
+                
+                  
+                  
+            }
+      .reg_bg1 > *{ width: 400px;
+                    height: 350px;
+                    flex-basis: 50%;
+                   background: #F78726;
+                    text-align: center;
+            } 
+     
+      .reg_bg1 img{ width: 400px;
+                   height: 350px;}
+      .reg_bg1 img:hover{-webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);}
+      
+      .reg_bg1 >figcaption {padding: 2%;}
+      
+/* ------Bio-Produkte-----------------*/
+      
+#art6{ background: url("../img/15852.jpg") center top fixed;
+		 background-size: cover;
+             display:flex;
+             justify-content: center;
+             height: 600px;
+             align-items: center;
+             text-transform: uppercase;
+             margin-top: -40px;
+             color:#fff;
+             text-align: center;
+             font-size: 2rem;
+              text-shadow: 3px 4px 7px rgba(81,67,21,0.9);
+      } 
+      .bio-container{
+            display: flex;
+            justify-content:center;
+            gap:1rem;
+            margin: auto;
+            flex-wrap: wrap;
+      }
+      
+      #cont04{text-align: center;width: 700px;margin: auto;padding: 2%;}
+      #cont04 p{font-size: 1.2rem;}
+      #cont04 h2{font-size: 2.2rem}
+      .bio { 
+            padding: 2%;
+            display:flex;
+            justify-content: center;
+            gap:1rem;
+            flex-wrap: nowrap;}
+      
+      .bio figcaption{padding:0 4% ;}
+      .bio figure {border: 2px solid #5C3C28 ;text-align: center; margin: auto;width: 320px}
+      .bio img{ width: 300px;;margin:1rem auto;
+               height: 270px;overflow: hidden;}
+     
+/*-------- Back-to-top --------*/
+#back-top  {
+		position: fixed;
+		right: 1rem;
+		bottom: 1rem;
+		display: none;
+		z-index: 100;}
+      
+#back-top a {
+		background: rgba(225,112,42,0.50);
+		color: #fff;
+		text-decoration: none;
+		border-radius: 50%;
+		padding: 0.9rem 1.1rem;
+		display: block;}
+      
+.fa-arrow-up-long{ font-size: 1.2rem ;}
+      
+/* slider-Anpassung -----*/
+.sy-box  {padding: 5% 0;} 
+      
+      
+      
+/* ----- Foot-----------------*/
+.foo_con01 { position: relative;
+             right: 0;
+             left: 0;
+             color: #fff;
+             height: 400px;;
+             background: rgba(92,60,40,1.00);
+             padding: 2%;}
+      
+#foo_logo   {  position: relative;
+               width:120px;
+               margin: auto;
+               padding-bottom: 2%}
+      
+#foo_con02  {  display: flex;
+               justify-content: center;
+               gap:5rem;
+               color: #fff;
+               margin: auto;
+               text-align: center;
+               flex-wrap: nowrap;
+               position: relative;} 
+      
+#foo_con02 p {color: #fff;line-height: 2rem;}
+      
+#foot   { border-top: 1px solid rgba(255,251,233,0.2);
+         line-height: 10px;
+         text-align: center;
+         background: rgba(92,60,40,1.00);}
+      
+#foot p {color: #fff; }
+      
+      
+/*-------Impressum---&---Datenschutz----------------*/
+.imp_con01{
+           padding: 5%;
+           margin: auto;}
+     
+.imp_con01 a {color: #CF5808;} 
+      
+/*-------Datenschutz----------------*/
+      
+ .data{ padding: 5%;
+           margin: auto;}     
+ .data  h3,h4{color: #452D1E;}   
+ .data a {color: #CF5808;}   
+      
+
+
+
+ 
+
+/* ----cookies----------*/
+
+#cookiedingsbums a {color:#000; text-decoration:none;}
+
+#cookiedingsbums a:hover {text-decoration:underline;}
+
+
+#cookiedingsbums  {    outline: 1px solid #865D43; 
+                       text-align:center; 
+                       border-top:1px solid #FFFBE9;
+                       background: linear-gradient( #FFFBE9,#865D43); 
+                       position:fixed;
+                       top:10vh; 
+                       left: 50%;
+                       transform: translateX(-50%);
+                       z-index:10000; 
+                       width:50vw; 
+                       font-size:1rem; 
+                       line-height:2rem;
+	                 padding:1rem;}
+
+.cookiedingsbumsCloser {
+                        color:#000;
+                        font-size: 15px;
+                        text-decoration: none;
+                        cursor:pointer;
+                        border:1px solid ; 
+                        border-color: #7b92a9;
+                        padding:4px 10px;
+                        margin-left:10px;
+                        background:#FFFBE9; /* Old browsers*/ 
+                        }
+}
+
